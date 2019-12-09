@@ -24,10 +24,14 @@
         <framework src="com.google.android.gms:play-services-base:$PLAY_SERVICES_VERSION" />
         <framework src="com.google.android.gms:play-services-wearable:$PLAY_SERVICES_VERSION" />
 
-        <!-- Using an aar lib, hence no messing around too much with the conf -->
-        <resource-file src="src/android/lib/cordova-wearos-plugin.aar" target="libs/cordova-wearos-plugin.aar" />
-        <framework src="src/android/cordova-wearos-plugin.gradle" custom="true" type="gradleReference" />
-    
+        <source-file src="src/android/CordovaWearOsPlugin.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/CordovaWearOsPluginAction.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsBinder.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsListenerService.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsMessageListener.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsMessageSender.java" target-dir="com/github/guikeller/cordova/wearos" />
+        <source-file src="src/android/WearOsServiceConnection.java" target-dir="com/github/guikeller/cordova/wearos" />
+
         <!-- The 'feature name' value is then available on the www/*-plugin.js file -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CordovaWearOsPlugin" >
